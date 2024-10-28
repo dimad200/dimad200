@@ -1,4 +1,4 @@
-entrypoint = "module_2_2.py"
+entrypoint = "modulr_2_hard.py"
 modules = ["python-3.11"]
 
 [nix]
@@ -11,5 +11,5 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "module_2_2.py"]
+run = ["python3", "modulr_2_hard.py"]
 deploymentTarget = "cloudrun"
