@@ -1,28 +1,17 @@
-# Задача "Распаковка":
-# 1.Функция с параметрами по умолчанию:
-# Создайте функцию print_params(a = 1, b = 'строка', c = True), которая принимает три параметра со значениями по умолчанию (например сейчас это: 1, 'строка', True).
-# Функция должна выводить эти параметры.
-def print_params(a = 1, b = 'строка', c = True):
-  print ("a = ", a, "b = ", b, "c = ", c)
+# Задача "Рекурсивное умножение цифр":
+# Напиши функцию get_multiplied_digits, которая принимает аргумент целое число number и подсчитывает произведение цифр этого числа.
 
-# Вызовите функцию print_params с разным количеством аргументов, включая вызов без аргументов.
-print_params(1, 2, 3)
-print_params()
-# Проверьте, работают ли вызовы print_params(b = 25) print_params(c = [1,2,3])
-print_params(b = 25) 
-print_params(c = [1,2,3])
-# 2.Распаковка параметров:
-# Создайте список values_list с тремя элементами разных типов.
-values_list = [36.6, "2 слона", True]
-values_dict = { "a":2, "b":"Авокадо", "c":False }
-# Создайте словарь values_dict с тремя ключами, соответствующими параметрам функции print_params, и значениями разных типов.
-# Передайте values_list и values_dict в функцию print_params, используя распаковку параметров (* для списка и ** для словаря).
-print_params(*values_list)
-print_params(**values_dict)
+def get_multiplied_digits(number=0):
+  str_number = str(number)
+  first=int(str_number[0])
+  if len(str_number)<2:
+    return first
+  else:
+   return first * get_multiplied_digits(int(str_number[1:]))
 
-# 3.Распаковка + отдельные параметры:
-# Создайте список values_list_2 с двумя элементами разных типов
-values_list_2 = [54.32, 'Строка' ]
-# Проверьте, работает ли print_params(*values_list_2, 42)
-print_params(*values_list_2, 42)
+result = get_multiplied_digits(40203)
 
+print(result)
+
+# Вывод на консоль:
+# 24
