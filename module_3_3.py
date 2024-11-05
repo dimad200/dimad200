@@ -22,8 +22,7 @@ print_params(**values_dict)
 
 # 3.Распаковка + отдельные параметры:
 # Создайте список values_list_2 с двумя элементами разных типов
-values_list_2 = [37.2, 'Пора болеть']
-#values_list_2 = [54.32, 'Строка' ]
+values_list_2 = [54.32, 'Строка' ]
 # Проверьте, работает ли print_params(*values_list_2, 42)
 print_params(*values_list_2, 42)
 
